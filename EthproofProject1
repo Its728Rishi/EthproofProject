@@ -34,7 +34,7 @@ contract RishiToken {
 
     // burn function
     function cancelTokens(address wallet, uint amount) public {
-        require(balances[wallet] >= amount, "Insufficient balance to burn");
+        require(balances[wallet] >= amount, "Insufficient balance to cancel");
         totalSupply -= amount;
         balances[wallet] -= amount;
     }
